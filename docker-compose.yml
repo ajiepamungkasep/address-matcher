@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  engine:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./models:/code/app/models
